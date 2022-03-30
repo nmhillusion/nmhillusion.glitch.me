@@ -2,6 +2,9 @@
   "name": "nmhillusion.glitch.me",
   "version": "1.0.0",
   "description": "project for page https://nmhillusion.glitch.me",
+  "engines": {
+    "node": "16.x"
+  },
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
