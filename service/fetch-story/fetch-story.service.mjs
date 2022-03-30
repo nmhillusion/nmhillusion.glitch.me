@@ -67,9 +67,12 @@ export class FetchStoryService {
             }
           );
 
-          const textNodesOfTitle = queryAllChildren(titleEl.children, {
-            type: "text",
-          });
+          const textNodesOfTitle =
+            null != titleEl
+              ? queryAllChildren(titleEl.children, {
+                  type: "text",
+                })
+              : [];
 
           const textNodesOfPost = queryAllChildren(postBodyEl.children, {
             type: "text",
@@ -124,7 +127,10 @@ export class FetchStoryService {
               textNodeOfPageTitle.data
             );
           } else {
-            resolvePage = resolvePage.replace(/__PAGE_TITLE__/g, "Không tiêu đề");
+            resolvePage = resolvePage.replace(
+              /__PAGE_TITLE__/g,
+              "Không tiêu đề"
+            );
           }
 
           resolve(resolvePage);
