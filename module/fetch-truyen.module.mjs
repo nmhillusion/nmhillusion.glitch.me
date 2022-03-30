@@ -1,60 +1,32 @@
 import { Router } from "express";
-import fetch from "node-fetch";
-import domParser from "html-dom-parser";
+import { FetchTruyenService } from "../service/fetch-truyen.service.mjs";
 
 export const router = Router();
-
-function queryChild(
-  children = [],
-  selectors = { type: "tag", name: "head" },
-  attribs = { class: "page" }
-) {
-  let result = null;
-  for (const child of children) {
-    if (
-      Object.keys(selectors).every((type) => child[type] === selectors[type])
-    ) {
-      result = child;
-      break;
-    }
-  }
-  return result;
-}
 
 router.get("/", (req, res) => {
   const { url } = req.query;
 
-  fetch(url, { method: "GET", redirect: "follow", compress: true })
-    .then((r) => r.text())
-    .then((html) => {
-      // console.log({ html });
-
-      const parsedDom = domParser(html);
-      const htmlEl = queryChild(parsedDom, {
-        type: "tag",
-        name: "html",
+  if (!/https?:\/\/metruyenchu\.com\/truyen\/(.+?)\/chuong-\d+/.test(url)) {
+    res.header("Content-Type", "application/json");
+    res.charset = "utf-8";
+    res.statusCode = 400;
+    res.send(
+      JSON.stringify({
+        errorMessage: "url is not valid",
+        validUrlPattern: `/https?:\/\/metruyenchu\.com\/truyen\/(.+?)\/chuong-\d+/`
+      })
+    );
+  } else {
+    FetchTruyenService.fetch(url)
+      .then((renderedHtml) => {
+        res.header("Content-Type", "text/html");
+        res.charset = "utf-8";
+        res.send(renderedHtml);
+      })
+      .catch((error) => {
+        console.error(error);
+        res.statusCode = 400;
+        res.send(JSON.stringify(error));
       });
-
-      const bodyEl = queryChild(htmlEl.children, {
-        type: "tag",
-        name: "body",
-      });
-
-      for (const child of bodyEl.children) {
-        if (child.name !== "script" && child.name !== "style") {
-          console.log({ child });
-        }
-      }
-
-      // id="js-read__content",class="post-body"
-
-      res.header("Content-Type", "text/html");
-      res.charset = "utf-8";
-      res.send("ok");
-    })
-    .catch((error) => {
-      console.error(error);
-      res.statusCode = 400;
-      res.send(error);
-    });
+  }
 });
