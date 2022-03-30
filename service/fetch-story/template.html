@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ginx :: __PAGE_TITLE__</title>
+    <style type="text/css">
+      html,
+      body {
+        font-size: 30px;
+        line-height: 1.5em;
+        color: #eee;
+        background-color: #444;
+      }
+
+      header {
+        border-bottom: solid 2px #999999;
+        margin: 1em;
+      }
+
+      footer {
+        border-top: solid 2px #999999;
+        margin: 1em;
+        background-color: grey;
+      }
+
+      .nav-button {
+        background-color: #333;
+        color: #eee;
+        font-size: 13px;
+        display: inline-block;
+        padding: 0.25em 1em;
+        margin: 0.5em;
+        border: solid 2px #333;
+        border-radius: 3px;
+        font-weight: 600;
+        font-family: monospace;
+        line-height: 1.1em;
+      }
+
+      .nav-url {
+        display: block;
+        padding: 1em;
+      }
+
+      .nav-url * {
+        display: inline-block;
+      }
+
+      .nav-url input {
+        width: 70%;
+      }
+
+      .nav-url button {
+        width: 25%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h2 class="title">__TITLE__</h2>
+      <h6 class="page-title">__PAGE_TITLE__</h6>
+    </header>
+    <article>__POST_BODY__</article>
+    <footer>
+      __PREVIOUS_LINK__ __NEXT_LINK__
+
+      <div class="nav-url">
+        <input type="text" name="url-to-go" id="url-to-go" />
+        <button class="btn btn-primary" onclick="gotoLink()">Goto</button>
+      </div>
+    </footer>
+
+    <script type="text/javascript">
+      function gotoLink() {
+        const urlToGo = document.querySelector("#url-to-go").value;
+        if (urlToGo) {
+          location.href = `/fetch-story/?url=${urlToGo}`;
+        }
+      }
+    </script>
+  </body>
+</html>
