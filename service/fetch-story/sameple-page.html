@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <link rel="dns-prefetch" href="//metruyenchu.com">
+  <link rel="dns-prefetch" href="//static.cdnno.com">
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="dns-prefetch" href="//aj1559.online">
+  <link rel="dns-prefetch" href="//pub.truyen.onl">
+  <link rel="dns-prefetch" href="//vtruyen.com">
+  <meta charset=utf-8>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1" >
+  <title>Đọc Trẫm Lại Không Muốn Làm Hoàng Đế - Chương 1</title>
+  <meta property="og:type" content="book" >
+  <meta property="og:url" content="https://metruyenchu.com/truyen/tram-lai-khong-muon-lam-hoang-de/chuong-1" >
+  <meta property="og:title" content="Trẫm Lại Không Muốn Làm Hoàng Đế - Chương 1" >
+  <meta property="og:description" content="Lục Giác đình bên trong, Lâm Dật nhìn lên bầu trời nóng bỏng Thái Dương, đem bố trí tại trên ..." >
+  <meta property="og:image" content="https://static.cdnno.com/poster/tram-lai-khong-muon-lam-hoang-de/600.jpg?1599993484" >
+  <meta name=description content="Đọc Chương 1: Trùng sinh của truyện Trẫm Lại Không Muốn Làm Hoàng Đế thuộc thể loại Dã Sử">
+  <meta name=keywords content="Trẫm Lại Không Muốn Làm Hoàng Đế chuong 1, Dã Sử">
+  <link href="//metruyenchu.com/assets/fonts/nh-icon.woff2" rel="preload" as="font" type=font/woff2 crossorigin>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600&amp;subset=latin-ext,vietnamese&display=swap" rel="preload" as="style">
+  <link href="//metruyenchu.com/assets/css/all_desktop.css?260323" rel="preload" as="style">
+  <link href="//metruyenchu.com/assets/js/manifest.js?260323" rel="preload" as="script">
+  <link href="//metruyenchu.com/assets/js/vendor.js?260323" rel="preload" as="script">link href="//metruyenchu.com/assets/js/desktop.js?260323" rel="preload" as="script">
+<link href="https://fonts.googleapis.com/css?family=Noticia+Text|Patrick+Hand|Roboto|Source+Sans+Pro&display=swap" rel="preload" as="style">
+<link href="//metruyenchu.com/assets/fonts/palatino/palatino.css?260323" rel="preload" as="style">
+<link data-ignore="true" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600&amp;subset=latin-ext,vietnamese&display=swap" rel="stylesheet">
+<link href="//metruyenchu.com/assets/css/all_desktop.css?260323" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noticia+Text|Patrick+Hand|Roboto|Source+Sans+Pro&display=swap">
+<link rel="stylesheet" href="//metruyenchu.com/assets/fonts/palatino/palatino.css?260323">
+<ins class="982a9496" data-key="9a6b5d8b28a4fd0600ab3f181ee7b718">
+</ins>
+<script async src=https://aj1559.online/ba298f04.js>
+</script>
+</head>
+<body class="page-read theme--5">
+<div id="app">
+<header class="header--read">
+<nav class="navbar navbar--read navbar-light navbar-expand">
+<div class="container px-3">
+<a class="navbar-brand mr-4" href="/">
+<img src=//metruyenchu.com/assets/images/logo.png?260323 alt="" height=48>
+</a>
+<ul class="navbar-nav mr-auto">
+<li class="nav-item dropdown dropdown-hover">
+<a class="nav-link d-flex align-items-center" href="javascript:void(0)">
+<i class="nh-icon icon-menu fz-13 mr-2">
+</i> Thể loại </a>
+<div class="dropdown-menu dropdown-menu--category rounded-0">
+<div class="row no-gutters">
+<a class="dropdown-item col-6 d-flex align-items-center" :class="activeGenre(id)" v-for="{ name, id, icon, index } in genreList" :key="index" :href="getFilterGenre(id)" >
+<i class="svg-icon mr-2">
+</i>{{name}} </a>
+</div>
+</div>
+</li>
+<li class="nav-item dropdown dropdown-hover">
+<a class="nav-link d-flex align-items-center" v-bind:href="getFilterBxh(-1)"> Bảng xếp hạng </a>
+<div class="dropdown-menu rounded-0">
+<a class="dropdown-item" :class="activeBxh(id)" v-for="{ name, id, slug, index } in bxhList" :key="index" v-bind:href="getFilterBxh(slug)">{{name}}</a>
+</div>
+</li>
+</ul>
+<div class="header__search-form ml-auto w-25" method="post">
+<input type=text class="form-control border-primary" name=q placeholder="Tìm kiếm" @keyup.enter="searchKeyword" v-model="keywordName">
+<button class="btn bg-transparent text-primary shadow-none" @click="searchKeyword()">
+<i class="nh-icon icon-search float-left">
+</i>
+</button>
+</div>
+<ul class="navbar-nav navbar-nav--auth ml-auto" id="info-user" style="z-index: 9999;" v-if="isLoggedIn">
+<li class="nav-item mr-4" v-cloak>
+<a class="nav-link d-flex align-items-center" href="https://pub.truyen.onl/books/create" target="_blank">
+<i class="nh-icon icon-up fz-13 mr-2">
+</i> Đăng truyện </a>
+</li>
+<li class="dropdown py-3" v-cloak>
+<a href="javascript:void(0)" role="button" id="dropdown-notification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="d-block text-body px-3 py-2">
+<i class="nh-icon icon-bell">
+</i>
+<span v-if="notificationUnreadCount > 0" class="counter badge badge-primary rounded-circle">{{ notificationUnreadCount }}</span>
+</a>
+<div class="dropdown-menu dropdown-menu-right dropdown-menu--notification pb-0 rounded-0" aria-labelledby="dropdown-notification">
+<ul class="list-unstyled mb-2 nh-list px-4">
+<li v-if="notificationUnreadList.length === 0">
+<p class="text-center">Không có thông báo nào</p>
+</li>
+<li v-for="(notification, index) in notificationUnreadList" :key="index">
+<a @click="notificationClicked(notification)" href="javascript:void(0)" class="d-block py-2 text-truncate">{{ notification.content }}</a>
+</li>
+</ul>
+<div class="bg-light border-top">
+<a href="javascript:void(0)" @click="actionTo('notifications')" class="d-block text-primary py-2 pl-4">Xem tất cả</a>
+</div>
+</div>
+</li>
+<li class="dropdown py-3" v-cloak>
+<a style="cursor: pointer;" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="d-flex align-items-center text-body px-3 py-2">
+<div class="nh-avatar nh-avatar--24 mr-2">
+<img v-lazy="userAvatar" v-if="hasAvatar">
+<img v-lazy="defaultAvatarProfile" v-else>
+</div> {{userName}} </a>
+<div class="dropdown-menu dropdown-menu-right dropdown-menu--profile px-4 rounded-0" aria-labelledby="dropdown-profile">
+<div class="media mb-4">
+<div class="nh-avatar nh-avatar--45 mr-3">
+<img v-lazy="userAvatar" v-if="hasAvatar">
+<img v-lazy="defaultAvatarProfile" v-else>
+</div>
+<div class="media-body">
+<div class="font-weight-semibold mb-1">{{userName}}</div>
+<ul class="list-unstyled d-flex flex-wrap">
+<li class="d-flex align-items-center mr-4">
+<i class="svg-icon icon-flower mr-2">
+</i>
+<a href="javascript:void(0)" @click="actionTo('property')">{{userInfo.ballot}}</a>
+</li>
+<li class="d-flex align-items-center">
+<i class="svg-icon icon-candy text-primary mr-2">
+</i>
+<a href="javascript:void(0)" @click="actionTo('property')">{{numberFormatTotalBalance}}</a>
+</li>
+</ul>
+</div>
+</div>
+<ul class="list-unstyled m-0">
+<li class="mt-2" v-for="{ index, name, lang, path } in navList" :key="index" v-if="index < 8">
+<a v-bind:href=path class="d-block py-2"> {{lang}} </a>
+</li>
+<li class="dropdown-divider">
+</li>
+<li class="">
+<a href="javascript:void(0)" class="d-block py-2" @click="actionTo('logout')"> Thoát </a>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+<ul v-if="!isLoggedIn && !spinnerUser" class="list-unstyled mb-0 ml-auto d-flex justify-content-center">
+<li class="mr-4">
+<a class="d-flex align-items-center px-3 py-2" href="https://pub.truyen.onl/books/create" target="_blank">
+<i class="nh-icon icon-up fz-13 mr-2">
+</i> Đăng truyện </a>
+</li>
+<li>
+<a href="javascript:void(0)" @click="openLogin" data-toggle="modal" class="d-block px-3 py-2"> Đăng nhập </a>
+</li>
+<li>
+<a href="javascript:void(0)" @click="openRegister" data-toggle="modal" class="d-block px-3 py-2"> Đăng ký </a>
+</li>
+</ul>
+</div>
+</nav>
+</header>
+<div id="chapter-content">
+<div v-on:keyup.left="goChapter()" v-on:keyup.a="goChapter()" v-on:keyup.d="goChapter(2)" v-on:keyup.right="goChapter(2)" tabindex="0" id="bookRead">
+<main class="main py-4">
+<div class="nh-read__container" :style="activeWidthSetting(settingThemes)">
+<div class="nh-read__right" id="js-left-menu" ref="jsLeftMenu" v-cloak>
+<ul class="list-unstyled m-0 nh-read__menu rounded-2" id="js-menu-actions">
+<li class="item" :class="activeMenu(menuLeftAction.chapter)">
+<a @click="actionMenu('chapter')" class="d-flex align-items-center justify-content-center js-menu-item js-tooltip" title="Danh sách chương" data-toggle="tooltip" data-placement="right">
+<i class="nh-icon icon-menu">
+</i>
+</a>
+<div v-if="spinnerChapter" class="nh-read__popover">
+<v-spinner >
+</div>
+<div v-else class="nh-read__popover" v-click-outside="onClickOutside">
+<button type=button style="z-index:1" class="btn btn-sm btn-close mr-2" @click="actionMenuClose('chapter')" data-type="close">
+<i class="nh-icon icon-close float-left">
+</i>
+</button>
+<div class="nh-read__popover-content">
+<div class="d-flex align-items-center mb-3 pr-3">
+<div class="h3 font-weight-normal mb-0">Danh sách chương</div>
+<button class="btn btn-white ml-auto px-3" @click="changeSortOrder">
+<i class="nh-icon icon-sort-desc h4 m-0 float-left" v-if="isSortChapterDesc">
+</i>
+<i class="nh-icon icon-sort-asc h4 m-0 float-left" v-else>
+</i>
+</button>
+</div>
+<div class="nh-section mb-4">
+<div class="row mt-2">
+<div class="col-6 border-bottom-dashed" v-for="(chapter, index) in chapterList" :key="index">
+<a @click="goChapter(chapter.index)" :class="isChapterActive(chapter)" class="media py-2 mb-1">
+<div class="media-body">
+<div class="text-overflow-1-lines"> {{chapter.name}} </div>
+</div>
+<i v-if="chapter.unlock_price > 0" class="nh-icon icon-lock text-tertiary h6 m-0">
+</i>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li class="item" :class="activeMenu(menuLeftAction.setting)">
+<a @click="actionMenu('setting')" class="d-flex align-items-center justify-content-center js-menu-item js-tooltip" title="Cài đặt hiển thị" data-toggle="tooltip" data-placement="right">
+<i class="nh-icon icon-setting">
+</i>
+</a>
+<div class="nh-read__popover nh-read__popover--setting">
+<button type=button class="btn btn-close" @click="actionMenuClose('setting')" data-type="close">
+<i class="nh-icon icon-close float-left">
+</i>
+</button>
+<div class="nh-read__popover-content" v-if="settingThemes !== null">
+<div class="d-flex align-items-center mb-3 pr-3">
+<div class="h3 font-weight-normal mb-0">Cài đặt</div>
+</div>
+<table class="table table-borderless">
+<tbody>
+<tr>
+<td style="width: 180px">
+<div class="d-inline-flex align-items-center">
+<i class="nh-icon icon-color h4 mb-0 mr-2 text-secondary">
+</i>Màu nền </div>
+</td>
+<td>
+<ul class="list-unstyled nh-read__themes d-flex flex-wrap" id="js-themes-picker">
+<li v-for="themes in themesList" :key="themes">
+<a @click="changeBackground(themes)" class="item rounded-circle" :class="activeSettingBackground(themes)" >
+</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="width: 180px" class="align-middle">
+<div class="d-inline-flex align-items-center">
+<i class="nh-icon icon-font h4 mb-0 mr-2 text-secondary">
+</i>Font chữ </div>
+</td>
+<td>
+<select class="form-control custom-select" id="js-font-picker" v-model="settingThemes.fontFamily">
+<option value="'Palatino Linotype', sans-serif"> Palatino Linotype </option>
+<option value="'Source Sans Pro', sans-serif">Source Sans Pro </option>
+<option value="'Segoe UI', sans-serif">Segoe UI</option>
+<option value="Roboto, sans-serif">Roboto</option>
+<option value="'Patrick Hand', sans-serif">Patrick Hand</option>
+<option value="'Noticia Text', sans-serif">Noticia Text</option>
+<option value="'Times New Roman', sans-serif">Times New Roman </option>
+<option value="Verdana, sans-serif">Verdana</option>
+<option value="Tahoma, sans-serif">Tahoma</option>
+<option value="Arial, sans-serif">Arial</option>
+</select>
+</td>
+</tr>
+<tr>
+<td style="width: 180px" class="align-middle">
+<div class="d-inline-flex align-items-center">
+<i class="nh-icon icon-size h4 mb-0 mr-2 text-secondary">
+</i>Cỡ chữ </div>
+</td>
+<td>
+<div class="d-flex align-items-center js-content-options" data-unit="px" data-type="font-size" data-max="30" data-min="14" data-step="1">
+<button class="btn btn-white border px-2 minus" @click="settingThemes.fontSize <= 14 ? settingThemes.fontSize: settingThemes.fontSize-=1">
+<i class="nh-icon icon-minus float-left">
+</i>
+</button>
+<div class="flex-fill text-center font-weight-semibold value" >{{settingThemes.fontSize}}px </div>
+<button class="btn btn-white border px-2 ml-auto plus" @click="settingThemes.fontSize >= 30 ? settingThemes.fontSize: settingThemes.fontSize+=1">
+<i class="nh-icon icon-plus float-left">
+</i>
+</button>
+</div>
+</td>
+</tr>
+<tr>
+<td style="width: 180px" class="align-middle">
+<div class="d-inline-flex align-items-center">
+<i class="nh-icon icon-width-resize h4 mb-0 mr-2 text-secondary">
+</i>Chiều rộng khung </div>
+</td>
+<td>
+<div class="d-flex align-items-center js-content-options" data-unit="px" data-type="width" data-max="1000" data-min="500" data-step="100">
+<button class="btn btn-white border px-2 minus" @click="settingThemes.lineWidth <= 500 ? settingThemes.lineWidth : settingThemes.lineWidth-=100">
+<i class="nh-icon icon-minus float-left">
+</i>
+</button>
+<div class="flex-fill text-center font-weight-semibold value"> {{settingThemes.lineWidth}}px </div>
+<button class="btn btn-white border px-2 ml-auto plus" @click="settingThemes.lineWidth >= 1000 ? settingThemes.lineWidth : settingThemes.lineWidth+=100">
+<i class="nh-icon icon-plus float-left">
+</i>
+</button>
+</div>
+</td>
+</tr>
+<tr>
+<td style="width: 180px" class="align-middle">
+<div class="d-inline-flex align-items-center">
+<i class="nh-icon icon-line-height h4 mb-0 mr-2 text-secondary">
+</i>Giãn dòng </div>
+</td>
+<td>
+<div class="d-flex align-items-center js-content-options" data-unit="%" data-type="line-height" data-max="200" data-min="100" data-step="10">
+<button class="btn btn-white border px-2 minus" @click="settingThemes.lineHeight <= 100 ? settingThemes.lineHeight : settingThemes.lineHeight-=10">
+<i class="nh-icon icon-minus float-left">
+</i>
+</button>
+<div class="flex-fill text-center font-weight-semibold value" >{{settingThemes.lineHeight}}% </div>
+<button class="btn btn-white border px-2 ml-auto plus" @click="settingThemes.lineHeight >= 200 ? settingThemes.lineHeight : settingThemes.lineHeight+=10">
+<i class="nh-icon icon-plus float-left">
+</i>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</li>
+<li class="item">
+<a v-bind:href="getLinkBook()" class="d-flex align-items-center justify-content-center js-tooltip" title="Thông tin truyện" data-toggle="tooltip" data-placement="right">
+<i class="nh-icon icon-arrow-left">
+</i>
+</a>
+</li>
+<li class="item js-tooltip" title="Hướng dẫn" data-toggle="tooltip" data-placement="right">
+<a @click="actionMenu('guide')" data-toggle="modal" class="d-flex align-items-center justify-content-center">
+<i class="nh-icon icon-info">
+</i>
+</a>
+</li>
+</ul>
+</div>
+<div class="nh-read__right" id="js-right-menu" ref="jsRightMenu" v-cloak>
+<ul class="list-unstyled m-0 nh-read__menu rounded-2">
+<li class="js-tooltip" title="Cảm xúc" data-toggle="tooltip" data-placement="right">
+<a @click="changeReact()" v-if="userInfo.email !== undefined" data-toggle="collapse" aria-expanded="false" aria-controls="js-reaction-menu" class="d-flex align-items-center justify-content-center js-tooltip">
+<i v-if="reactActiveName === undefined" class="nh-icon icon-heart">
+</i>
+<i v-else class="nh-icon" :class="classReact()">
+</i>
+</a>
+<a @click=toggleModal() v-else data-toggle="collapse" aria-expanded="false" aria-controls="js-reaction-menu" class="d-flex align-items-center justify-content-center js-tooltip">
+<i class="nh-icon icon-heart">
+</i>
+</a>
+<ul v-if="activeReact" class="nh-read__reaction list-unstyled collapse py-3 bg-white show">
+<li v-for="{id, name, index} in reactionList" :key="index">
+<a @click="reactionChapter(id)" :class="activeClassReact(id)" class="d-flex align-items-center justify-content-center">
+<i class="svg-icon" :class=name>
+</i>
+</a>
+</li>
+</ul>
+</li>
+<li v-if="spinnerBookmark" style="height: 50px;">
+<a href="javascript:void(0)" class="d-flex align-items-center justify-content-center js-tooltip">
+<div style="width: 24px; height: 24px" class="spinner-border text-default" role="status">
+<span class="sr-only">Loading...</span>
+</div>
+</a>
+</li>
+<li v-else style="height: 50px;">
+<a @click="changeBookmark" v-if="chapterBookmark !== true" class="d-flex align-items-center justify-content-center js-tooltip" title="Đánh dấu" data-toggle="tooltip" data-placement="right">
+<i class="nh-icon icon-save">
+</i>
+</a>
+<a @click="changeBookmark" v-if="chapterBookmark === true" class="d-flex align-items-center justify-content-center js-tooltip" title="Bỏ đánh dấu" data-toggle="tooltip" data-placement="right">
+<i class="nh-icon icon-check">
+</i>
+</a>
+</li>
+<li>
+<a onclick="window.scrollTo(0, $('#read-comments').offset().top)" class="d-flex align-items-center justify-content-center js-tooltip" title="Xem bình luận" data-toggle="tooltip" data-placement="right">
+<i class="nh-icon icon-comments">
+</i>
+</a>
+</li>
+</ul>
+</div>
+<div class="mb-3">
+</div>
+<div class="nh-read__body rounded-2" id="js-read__body" v-cloak>
+<div class="d-flex align-items-center mb-4">
+<a @click="goChapter()" class="nh-read__action d-flex align-items-center h6 mb-0 rounded-3 py-2 px-4 disabled">
+<i class="nh-icon icon-prev-2 mr-2 small">
+</i>Chương trước </a>
+<a @click="goChapter(2)" class="nh-read__action d-flex align-items-center h6 mb-0 ml-auto rounded-3 py-2 px-4"> Chương sau <i class="nh-icon icon-next-2 ml-2 small">
+</i>
+</a>
+</div>
+<div class="h1 mb-4 font-weight-normal nh-read__title"> Chương 1: Trùng sinh </div>
+<ul class="list-unstyled d-flex align-items-center flex-wrap">
+<li class="d-flex mr-4 mb-1">
+<h1 class="fz-body font-weight-normal m-0">
+<a href="https://metruyenchu.com/truyen/tram-lai-khong-muon-lam-hoang-de" class="text-inherit d-flex align-items-center">
+<i class="nh-icon icon-book mr-2">
+</i> Trẫm Lại Không Muốn Làm Hoàng Đế </a>
+</h1>
+</li>
+<li class="d-flex align-items-center mr-4 mb-1">
+<i class="nh-icon icon-file-edit mr-2">
+</i>
+<a href="https://metruyenchu.com/ho-so/1000071">Tiểu Si</a>
+</li>
+<li class="d-flex align-items-center mr-4 mb-1">
+<i class="nh-icon icon-text mr-2">
+</i> 1765 chữ </li>
+<li class="d-flex align-items-center mr-4 mb-1">
+<i class="nh-icon icon-heart mr-2">
+</i> 133 cảm xúc </li>
+<li class="d-flex align-items-center mr-4 mb-1">
+<i class="nh-icon icon-clock mr-2">
+</i> 2020-09-13 23:00:31 </li>
+</ul>
+<div class="text-center nh-read__alert mb-3">
+<a class="close" href="https://metruyenchu.com/tai-khoan/nang-cap" target="_blank">
+<span aria-hidden="true">&times;</span>
+</a>
+<div class="mb-1">
+<small class="text-muted">
+<small>&mdash; QUẢNG CÁO &mdash;</small>
+</small>
+</div>
+<div class="my-1 d-flex justify-content-center">
+<div class="mx-1">
+<iframe src=//metruyenchu.com/passback/mtc-adx-metruyenchu.com_300x250 marginheight="0" marginwidth="0" frameborder="0" scrolling="no" style="width:300px;height:250px;">
+</iframe>
+</div>
+<div class="mx-1">
+<iframe src=//metruyenchu.com/passback/mtc-adx-metruyenchu.com_300x250 marginheight="0" marginwidth="0" frameborder="0" scrolling="no" style="width:300px;height:250px;">
+</iframe>
+</div>
+</div>
+</div>
+<div class="nh-read__content post-body" id="js-read__content" :style="activeStyleSetting(settingThemes)"> Lục Giác đình bên trong, Lâm Dật nhìn lên bầu trời nóng bỏng Thái Dương, đem bố trí tại trên ghế mây cái mông đi lên xê dịch, nâng chung trà lên miệng lớn rót đi vào, uống cái úp sấp.<br >
+<br >Sau đó tiếp tục híp mắt lại nằm ngửa.<br >
+<br >Vẫn đứng tại hắn đối diện một cái thái giám, vội vàng cầm lấy trên bàn ấm trà cho hắn trong chén nối thêm đầy nước.<br >
+<br >"Thời gian này có thể làm sao sống nha! Thật sự là nóng không có cách nào a!"<br >
+<br >Lâm Dật đối với mình thiếp thân Nội Thị Hồng Ứng liên tiếp thở dài, dù cho đã đi tới cái này thế giới mười tám năm, hắn vẫn là không quen không có điều hoà không khí, không có quạt thời gian.<br >
+<br >Mùa hè là thật khó sắc!<br >
+<br >Trước mắt hắn gánh lấy "Ly kinh phản đạo" phong hiểm, tổn hại lấy chính mình Vương gia "Cao đại thượng" hình tượng, xuyên tự chế đại quần cộc tử, hai tay để trần, y nguyên không ngừng xuất mồ hôi.<br >
+<br >Hồng Ứng cười làm lành nói, "Vương gia, nếu không lại cho ngươi chơi đùa điểm băng khối?"<br >
+<br >Lâm Dật liếc một cái Hồng Ứng nói, "Quên đi thôi, tác dụng không lớn."<br >
+<br >Tiêu Thạch chế thành nước đá, cũng liền miễn cưỡng lúc buổi tối có thể ở trong phòng dùng một chút, phóng tới bên ngoài, cơ bản không dậy được cái tác dụng gì, nhiều lắm là có điểm tâm bên trong an ủi.<br >
+<br >Hồng Ứng theo bên trên thị nữ trong tay nhận lấy canh đậu xanh đưa tới nói, "Vương gia, tiểu nhân là đau lòng ngươi, uống điểm canh đậu xanh a, giải nóng."<br >
+<br >"Không uống, một bụng nước trà, chỗ nào còn có thể rót đến xuống dưới."<br >
+<br >Lâm Dật không nhịn được khoát tay áo, hắn cũng không dưới thói quen mọi người loại này quá độ quan tâm.<br >
+<br >Hồng Ứng gặp Lâm Dật híp lại con mắt, vội vàng hướng về phía bên trên thị nữ nói, "Thất thần làm cái gì, tranh thủ thời gian cấp Vương gia rung cây quạt."<br >
+<br >Lâm Dật thản nhiên nói, "Ai, chờ sau này có thời gian có điều kiện, chúng ta a đi sơn thượng nghỉ mát."<br >
+<br >Cảm thụ được bồ phiến đưa tới phơ phất gió mát, hắn cảm thấy rất hưởng thụ.<br >
+<br >Đời trước, tại Cô Nhi Viện lớn lên, không cha không mẹ.<br >
+<br >Gập ghềnh bên trên bình thường đại học, có lẽ là não tử không có đuổi theo, có lẽ là ngày sau hoàn cảnh tạo thành tính cách thiếu hụt, tóm lại các loại nguyên nhân, hắn không có số phát tài.<br >
+<div class="pt-3 text-center" style="margin-right: -1rem;">
+<div class="mb-1 fz-13">
+<small class="text-muted">
+<small>&mdash; QUẢNG CÁO &mdash;</small>
+</small>
+</div>
+<div class="my-1">
+<iframe src=//metruyenchu.com/passback/mtc-adx-metruyenchu.com_300x250 marginheight="0" marginwidth="0" frameborder="0" scrolling="no" style="width:300px;height:250px;">
+</iframe>
+</div>
+</div>
+<br >Nếu như không có gì bất ngờ xảy ra, lại giống đại đa số người bình thường một dạng mua cái phòng ở, cưới cái lão bà, bình bình đạm đạm cả đời.<br >
+<br >Đáng tiếc làm sao tính được số trời, chính mình đường biên vỉa hè bên cạnh đứng hảo hảo, ô tô cũng có thể đụng bên trên, từ đây xe lăn thay thế hai chân.<br >
+<br >Dù sao không có tự mình kết liễu dũng khí, chết tử tế không bằng lại sống sót.<br >
+<br >Sống sót liền phải ăn cơm, nhưng là lại không tìm được việc làm.<br >
+<br >Cũng may hắn còn có gõ chữ cẩu này trọng thân phận, mặc dù viết bốn năm bản, mỗi bản đều thành tích không tốt, nhưng là luôn luôn sinh ra chính mình sớm muộn cũng có một ngày lại thành thần ảo giác!<br >
+<br >Ngồi trên xe lăn, độ qua đồi phế kỳ về sau, hắn lại không kịp chờ đợi mở một bản sách mới.<br >
+<br >Siêu Cấp Vú Em, chỉ là cái này tên sách, ngẫm lại liền khiến người hưng phấn!<br >
+<br >Đồng thời dung nhập miệng méo Chiến Thần cùng Người Ở Rể phong cách, quả thực là một thiên tài thiết lập, nghĩ không lửa đều khó!<br >
+<br >Thủ chỉ đập bàn phím, một mực chưa ngừng, viết tới hưng phấn chỗ, hận không thể theo ghế dựa bên trên nhảy lên đến.<br >
+<br >Viết tốt như vậy!<br >
+<br >Một năm không kiếm một trăm vạn đều là không được!<br >
+<br >Đêm đó truyền xong một vạn chữ về sau, cao hứng uống ba bình bia, nằm ở trên giường, ôm gối, làm lấy thành thần mộng đẹp!<br >
+<br >Lại nghĩ không ra sau khi tỉnh lại sẽ đến tới cái thế giới xa lạ này.<br >
+<br >Lương Quốc cửu hoàng tử, vừa ra đời liền trở thành Doanh Gia.<br >
+<br >Tại nơi này, không có người có thể tùy ý lại khi dễ hắn, khỏi cần lại vì làm việc phát sầu, không cần lại vì cuộc sống bôn ba, thoát ly mua nhà, cưới lão bà bể khổ.<br >
+<br >Trọng yếu nhất chính là, có thể một lần nữa đứng tại dưới ánh mặt trời chạy nhanh, không có so đây càng tốt.<br >
+<br >Hồng Ứng cười làm lành nói, "Vương gia, nếu không tiểu nhân đi chuẩn bị một chút, ngày mai chúng ta có thể tới Đức Ân nghỉ mát sơn trang đối một chút thời gian, nghe nói Tấn Vương, Nam Lăng Vương, còn có Tín Vương, trưởng công chúa đều ở đây."<br >
+<br >Lâm Dật lắc đầu nói, "Bổn vương lập tức liền muốn liền phiên, tới quay về Đức Ân đến nửa tháng, không cần thiết giày vò."<br >
+<br >Theo xuất sinh một khắc kia trở đi, hắn liền biết mình tình cảnh.<br >
+<br >Mẹ đẻ Ninh Quý Phi chính là được sủng ái thời khắc, đúng lúc gặp lại sinh hạ hoàng tử, cung bên trong không biết có bao nhiêu đôi đỏ bừng con mắt nhìn chằm chằm mẹ con các nàng, hận không thể trừ chi cho thống khoái.<br >
+<br >Hắn bản vô tội, thế nhưng là thân ở Hoàng gia chính là sai lầm lớn nhất.<br >
+<br >Đó là lí do mà, hắn xưa nay không tại Lão Hoàng Đế trước mặt tranh sủng, thậm chí cố ý không lấy Lão Hoàng Đế hoan hỉ.<br >
+<br >Lão Hoàng Đế, nếu là ôm hắn một lần, hắn liền gào khóc, thậm chí dám trên người Lão Hoàng Đế đi ị đi tiểu.<br >
+<br >Chọn đồ vật đoán tương lai hôm đó, hắn không chút do dự đoạt kim tệ, gắt gao kéo.<br >
+<br >Cho đến trưởng thành, hắn cũng không để cho phía trên các ca ca cùng Hậu Cung Tần Phi nhóm thất vọng, xem tài vật như mạng, ham hưởng thụ, bất học vô thuật, ngực không có đại chí.<br >
+<br >Bất quá, Lão Hoàng Đế lại là đã đối hắn chán ghét chí cực, thẳng đến mười sáu tuổi mới để hắn mở các xuất cung.<br >
+<br >Dựa theo quy củ, Lương Quốc vương công quý tộc bình thường đều lại ở tại đô thành An Khang Bắc Thành, mà Lâm Dật phủ đệ lại được an bài tại vắng vẻ nam thành.<br >
+<br >Vốn là đời trước Lại Bộ Thị Lang Chu Đào tòa nhà, bởi vì mưu nghịch án chịu dính dáng, bị Lão Hoàng Đế một đao chặt cổ, xét nhà là nhất định kết quả.<br >
+<br >Xung quanh ở đại đa số đều là bình dân.<br >
+<br >Lâm Dật lại là không quan tâm, Lương Quốc lập quốc hơn hai trăm năm, hoàng tử hoàng tôn đếm không hết, nơi ở cũng không giàu có, có thể đạt được một bộ thuộc về mình ngoài cung phủ đệ đã là rất không tệ.<br >
+<br >Hơn nữa, nhịn đến giờ đây, cuối cùng tại có mục đích bản thân đất phong.<br >
+<br >Hắn tự nhiên sẽ không tiếp tục dừng lại đô thành An Khang, đi chính mình trên phong địa, trời cao hoàng đế xa, muốn làm sao giày vò đều được, ai có thể quản được hắn?<br >
+<br >"Vương gia. . ." Hồng Ứng sốt ruột nói, "Tam Hòa thuỷ thổ ấm nóng, thêm vào chướng khí, đưa tới mười người chết đến bốn, năm, đi không được a!"<br >
+<br >Lâm Dật cười nhạo nói, "Chẳng lẽ ỷ lại đô thành?"<br >
+<br >Hắn đất phong Tam Hòa tại Lương Quốc vùng cực nam, phía đông Lâm Hải, nam giáp giới Man Di Chi Địa, hoàn cảnh ác liệt, không dễ sinh tồn, các triều đại đổi thay đều là đất lưu đày.<br >
+<div class="pt-3 text-center" style="margin-right: -1rem;">
+<div class="mb-1 fz-13">
+<small class="text-muted">
+<small>&mdash; QUẢNG CÁO &mdash;</small>
+</small>
+</div>
+<div class="my-1">
+<iframe src=//metruyenchu.com/passback/mtc-adx-metruyenchu.com_300x250 marginheight="0" marginwidth="0" frameborder="0" scrolling="no" style="width:300px;height:250px;">
+</iframe>
+</div>
+</div>
+<br >Đó là lí do mà, kể từ năm ngày trước hắn được phong làm Tam Hòa vương về sau, đô thành bên trong không biết có bao nhiêu người ở sau lưng chê cười hắn đâu!<br >
+<br >Hắn ngược lại không để bụng, tốt xấu hắn là nhận qua cao đẳng giáo dục tứ hữu tân nhân!<br >
+<br >Làm sao có thể tin chướng khí loại vật này!<br >
+<br >Cái gọi là chướng khí hẳn là là nhiều loại tật bệnh tổng hợp thể, nơi này bao gồm ác tính bệnh sốt rét, trùng hút máu bệnh này địa phương bệnh, bản lẫn nhau không liên quan, đoán chừng là nghe nhầm đồn bậy, không rõ ràng xưng là chướng khí.<br >
+<br >Hồng Ứng do dự nói, "Thế nhưng là Tín Vương, Đại Vương giờ đây. . . . ."<br >
+<br >Lâm Dật lắc đầu nói, "Bọn hắn là bọn hắn, ta là ta, không giống nhau."<br >
+<br >Ngũ Hoàng Tử Tín Vương, Lục hoàng tử Đại Vương, tại ba năm trước đây đã thụ phong, đất phong so Tam Hòa không biết muốn tốt bao nhiêu lần, nhưng là chậm chạp không chịu liền phiên.<br >
+<br >Một khi liền phiên, trừ phi có chuyện đặc biệt, không phải vậy đời này không có khả năng lại quay về đô thành.<br >
+<br >Bất quá hoàng đế nhưng cũng không có thúc giục ý tứ.<br >
+<br >Hồng Ứng thấp giọng nói, "Quý Phi Nương Nương sáng sớm phái người tới truyền lời nói Thánh Thượng long thể mới khỏi, Vương gia ngươi nên tận tận hiếu tâm."<br >
+<br >Lâm Dật tùy tiện nói, "Dù sao lão đầu tử không thích bổn vương, bổn vương cũng không thể sủng, đi có làm được cái gì, chúng ta a, vẫn là đàng hoàng liền phiên đi thôi."<br >
+<br >Tranh sủng đoạt đích loại chuyện ngu này, hắn là sẽ không làm.<br >
+<br >Làm hoàng đế lại có thể thế nào?<br >
+<br >Như thường không rảnh điều, không có wifi, không có LOL!<br >
+<br >Tới phương nam, làm Thổ Hoàng Đế, lấy được mấy cái lão bà, trải qua sống mơ mơ màng màng sinh hoạt, không thể tốt hơn!<br >
+<br >Lại nói, đây là một cái hắn trọn vẹn không biết lịch sử triều đại, không làm được tiên tri, dựa vào cái gì đi tranh đế vị?<br >
+<br >Xuyên thành phản phái, biên tập lại nhân sinh, đùa bỡn lòng người <a href="https://metruyenchu.com/truyen/phan-phai-cuu-the-luan-hoi-lam-cho-nu-chu-khoc-cau-tha-thu" target="_blank">
+<strong class="text-muted">Phản Phái: Cửu Thế Luân Hồi, Làm Cho Nữ Chủ Khóc Cầu Tha Thứ</strong>
+</a>
+<br >
+</div>
+<div class="nh-read__alert d-flex align-items-center mt-5">
+<i class="nh-icon icon-bell h6 mb-0 mr-2">
+</i> https://metruyenchu.com/truyen/chung-tong THỜI ĐẠI CHIẾN TRANH NAM TỐNG, KIM QUỐC VÀ MÔNG CỔ, MAIN THIẾT HUYẾT, ĐẦY RẪY TÍNH KẾ... THU PHỤC YÊN VÂN THẬP CỬU CHÂU ĐẠT THÀNH SỰ NGHIỆP TO LỚN. Truyện hay vô cùng ạ!!! </div>
+<div class="d-flex justify-content-center mt-5">
+<button class="btn rounded-3 text-center px-3 mx-3 nh-read__button d-flex align-items-center flex-column" @click="rateChapter()" data-toggle="modal">
+<i class="h4 nh-icon icon-star">
+</i>
+<span>Đánh giá</span>
+</button>
+<button class="btn rounded-3 text-center px-3 mx-3 nh-read__button d-flex align-items-center flex-column" @click="voteChapter()" data-toggle="modal" :disabled="spinnerUser">
+<i class="h4 nh-icon icon-flower">
+</i>
+<span>Đề cử</span>
+</button>
+<button class="btn rounded-3 text-center px-3 mx-3 nh-read__button d-flex align-items-center flex-column" @click="sendGift()" data-toggle="modal">
+<i class="h4 nh-icon icon-gift">
+</i>
+<span>Tặng quà</span>
+</button>
+</div>
+</div>
+<div class="mt-3">
+</div>
+<div class="nh-read__pagination d-flex mt-3 rounded-2" v-cloak>
+<a id="prevChapter" @click="goChapter()" class="paginate-chapter-item d-flex align-items-center justify-content-center flex-fill h6 mb-0 py-3 px-4 disabled">
+<i class="nh-icon icon-prev-2 mr-2 small">
+</i>Chương trước </a>
+<a @click="reportChapter" data-toggle="modal" class="nh-read__pagination--report d-flex align-items-center justify-content-center h4 mb-0 py-3 px-4">
+<i class="nh-icon icon-alert">
+</i>
+</a>
+<a id="nextChapter" @click="goChapter(2)" class="paginate-chapter-item d-flex align-items-center justify-content-center flex-fill h6 mb-0 ml-auto py-3 px-4"> Chương sau <i class="nh-icon icon-next-2 ml-2 small">
+</i>
+</a>
+</div>
+<div class="nh-read__comments mt-3 rounded" id="read-comments" v-cloak>
+<div class="row">
+<div class="col-8">
+<chapter-comment book_id="105163" chapter_id="13022466" >
+</chapter-comment>
+</div>
+<div class="col-4" class="text-center">
+<div>
+<center class="nh-read__pagination">
+<a href="https://vtruyen.com/truyen/di-ban-hu-tieu-tai-di-gioi" target="_blank">
+<img src=https://static.cdnno.com/storage/topbox/6e91e772c75c6409273c291ec90aed3a.jpg alt="Ta Bán Hủ Tiếu Tại Dị Giới" class="img-fluid">
+</a>
+</center>
+</div>
+<hr class="my-3">
+<div>
+<center class="nh-read__pagination">
+<a href="https://vtruyen.com/truyen/the-gioi-duy-nhat-phap-su" target="_blank">
+<img src=https://static.cdnno.com/storage/topbox/d04e896066128dcc3541990b641ea378.jpg alt="Thế Giới Duy Nhất Pháp Sư" class="img-fluid">
+</a>
+</center>
+</div>
+<hr class="my-3">
+<div>
+<center class="nh-read__pagination">
+<a href="https://metruyenchu.com/truyen/bat-dau-thoi-dien-ma-vong-lien-tiep-toan-bo-nhan-loai" target="_blank">
+<img src=https://static.cdnno.com/storage/topbox/e8ed1491f2b010a159650faa8d84823a.jpg alt="Bắt Đầu Thôi Diễn Ma Võng, Liên Tiếp Toàn Bộ Nhân Loại" class="img-fluid">
+</a>
+</center>
+</div>
+<hr class="my-3">
+<div>
+<center class="nh-read__pagination">
+<a href="https://vtruyen.com/truyen/huyen-luc" target="_blank">
+<img src=https://static.cdnno.com/storage/topbox/e50f1bd0582b14d328f15a214e611617.jpg alt="Huyền Lục" class="img-fluid">
+</a>
+</center>
+</div>
+<hr class="my-3">
+</div>
+</div>
+</div>
+</div>
+<div class="modal modal-auth fade show" id="js-guide" tabindex="-1" role="dialog" aria-labelledby="js-guideTitle" aria-modal="true" style="display: block;" v-if="menuLeftAction.guide" v-cloak >
+<div class="modal-dialog modal-dialog-centered" role="document" v-cloak>
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title" id="js-guideTitle">Hướng dẫn</h5>
+<button type=button class="close" @click="actionMenuClose('guide')" data-dismiss="modal" aria-label="Close">
+<i class="nh-icon icon-close">
+</i>
+</button>
+</div>
+<div class="modal-body p-4 text-center">
+<img src=//metruyenchu.com/assets/images/guide.png?260323 alt="" class="w-100">
+<button class="btn btn-primary px-5 mt-4" @click="actionMenuClose('guide')" data-dismiss="modal">Tắt</button>
+</div>
+</div>
+</div>
+</div>
+<reviews-translator>
+</reviews-translator>
+<chapter-vote>
+</chapter-vote>
+<book-gift>
+</book-gift>
+<div class="modal-backdrop fade show" v-if="menuLeftAction.guide">
+</div>
+<chapter-unlock>
+</chapter-unlock>
+</main>
+<report>
+</report>
+</div>
+</div>
+<app-login>
+</app-login>
+<app-register>
+</app-register>
+<app-forgot>
+</app-forgot>
+<app-retry>
+</app-retry>
+</div>
+<div class="modal-backdrop fade d-none" id="dialog-backdrop">
+</div>
+<script>(function(i, s, o, g, r, a, m) { i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function() { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o), m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m) })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga'); ga('create', 'UA-165292417-3', 'metruyenchu.com'); ga('require', 'displayfeatures'); ga('send', 'pageview');</script>
+<script> window.bookId = '105163'; window.chapterId = '13022466'; window.slug = 'tram-lai-khong-muon-lam-hoang-de'; window.chapter_index = '1'; window.latest_index = '14618234'; window.react = ''; window.ssrLoadingPage = 'chapter';window.chapterRes = {"data":{"_status":200,"_data":{"id":13022466,"index":1,"name":"Ch\u01b0\u01a1ng 1: Tr\u00f9ng sinh","word_count":1765,"view_count":3832,"like_count":133,"updated_at":"02-04-2022 05:03:34","editor":"","content":"content","user_id":1000071,"unlock_price":0,"published_at":"2020-09-13 23:00:31","book_id":105163,"book_slug":"tram-lai-khong-muon-lam-hoang-de","book_name":"Tr\u1eabm L\u1ea1i Kh\u00f4ng Mu\u1ed1n L\u00e0m Ho\u00e0ng \u0110\u1ebf","book_poster":{"default":"https:\/\/static.cdnno.com\/poster\/tram-lai-khong-muon-lam-hoang-de\/default.jpg?1599993484","600":"https:\/\/static.cdnno.com\/poster\/tram-lai-khong-muon-lam-hoang-de\/600.jpg?1599993484","300":"https:\/\/static.cdnno.com\/poster\/tram-lai-khong-muon-lam-hoang-de\/300.jpg?1599993484","150":"https:\/\/static.cdnno.com\/poster\/tram-lai-khong-muon-lam-hoang-de\/150.jpg?1599993484"},"book_cover":{"default":"\/\/metruyenchu.com\/image\/1280x628.png?260323","1280":"\/\/metruyenchu.com\/image\/1280x628.png?260323","640":"\/\/metruyenchu.com\/image\/1280x628.png?260323","320":"\/\/metruyenchu.com\/image\/1280x628.png?260323"},"book_cover_updated_at":null,"book_latest_chapter":14618234,"first_genre_name":"D\u00e3 S\u1eed","author":"Tranh C\u00e2n Lu\u1eadn L\u01b0\u1ee1ng Hoa Hoa M\u1ea1o","adx_blocked":0,"book_note":"https:\/\/metruyenchu.com\/truyen\/chung-tong TH\u1edcI \u0110\u1ea0I CHI\u1ebeN TRANH NAM T\u1ed0NG, KIM QU\u1ed0C V\u00c0 M\u00d4NG C\u1ed4, MAIN THI\u1ebeT HUY\u1ebeT, \u0110\u1ea6Y R\u1eaaY T\u00cdNH K\u1ebe... THU PH\u1ee4C Y\u00caN V\u00c2N TH\u1eacP C\u1eecU CH\u00c2U \u0110\u1ea0T TH\u00c0NH S\u1ef0 NGHI\u1ec6P TO L\u1edaN. Truy\u1ec7n hay v\u00f4 c\u00f9ng \u1ea1!!!","previous_index":null,"next_index":2,"react":null,"log":"eyJpdiI6IkgxTUVYWszEctkMfbvZBABCtjhhUTNuTUlPdUFKTXJoY0E9PSIsInZhbHVlIjoiOG1CcWdvc3FGTFROTWlwa3FhSVFrdz09IiwibWFjIjoiMjBjNTgzOGYyOGYyZWRmZDlmODQxMDk1NjI0MzNhMzU5OTE0NWVhZTYwOWM5OTFkYzBkNmY4YTgxMjc3Y2ViZiJ9","lock_type":0,"user":{"id":1000071,"name":"Ti\u1ec3u Si","avatar":{"200":"https:\/\/static.cdnno.com\/user\/default\/200.jpg","100":"https:\/\/static.cdnno.com\/user\/default\/100.jpg","50":"https:\/\/static.cdnno.com\/user\/default\/50.jpg"}}}}}; document.onkeyup = function (e) { switch (e.code) { case "ArrowLeft": switchChapter('prevChapter'); break; case "ArrowRight": switchChapter('nextChapter'); break; } }; function switchChapter(nav) { document.getElementById(nav).click(); } </script>
+<style> #book-information #report-book #suggest-book #reading-book a { cursor: pointer; } </style>
+<style> .user-avatar { max-width: 36px; border-radius: 50% 50%; margin-top: -6px; } #bookRead a { cursor: pointer; } /*.nh-read__container {*/ /* z-index: 1050*/ /*}*/ .post-body{ -moz-user-select: none; /* Firefox */ -ms-user-select: none; /* Internet Explorer */ -khtml-user-select: none; /* KHTML browsers (e.g. Konqueror) */ -webkit-user-select: none; /* Chrome, Safari, and Opera */ -webkit-touch-callout: none; /* Disable Android and iOS callouts*/ } .nh-read__action.disabled, .paginate-chapter-item.disabled { cursor: default; opacity: 0.1; } </style>
+<script> window.is_safari_user_agent = 1; </script>
+<script src=//metruyenchu.com/assets/js/manifest.js?260323>
+</script>
+<script src=//metruyenchu.com/assets/js/vendor.js?260323>
+</script>
+<script src=//metruyenchu.com/assets/js/desktop.js?260323>
+</script>
+</body>
+</html>

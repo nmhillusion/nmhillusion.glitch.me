@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ginx :: __PAGE_TITLE__</title>
+    <title>__PAGE_TITLE__</title>
     <style type="text/css">
       html,
       body {
-        font-size: 30px;
+        font-size: 50px;
         line-height: 1.5em;
         color: #eee;
         background-color: #444;
@@ -23,12 +23,18 @@
         border-top: solid 2px #999999;
         margin: 1em;
         background-color: grey;
+        display: block;
+      }
+
+      .nav-button-box {
+        display: flex;
+        justify-content: center;
       }
 
       .nav-button {
         background-color: #333;
         color: #eee;
-        font-size: 13px;
+        font-size: 1em;
         display: inline-block;
         padding: 0.25em 1em;
         margin: 0.5em;
@@ -50,10 +56,12 @@
 
       .nav-url input {
         width: 70%;
+        font-size: 1em;
       }
 
       .nav-url button {
         width: 25%;
+        font-size: 1em;
       }
     </style>
   </head>
@@ -64,8 +72,7 @@
     </header>
     <article>__POST_BODY__</article>
     <footer>
-      __PREVIOUS_LINK__ __NEXT_LINK__
-
+      <div class="nav-button-box">__PREVIOUS_LINK__ __NEXT_LINK__</div>
       <div class="nav-url">
         <input type="text" name="url-to-go" id="url-to-go" />
         <button class="btn btn-primary" onclick="gotoLink()">Goto</button>
@@ -78,6 +85,10 @@
         if (urlToGo) {
           location.href = `/fetch-story/?url=${urlToGo}`;
         }
+      }
+
+      function scrollDown() {
+        window.scroll(0, window.scrollY + window.screen.availHeight / 2);
       }
     </script>
   </body>
