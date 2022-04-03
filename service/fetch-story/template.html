@@ -11,7 +11,8 @@
         font-size: 50px;
         line-height: 1.5em;
         color: #eee;
-        background-color: #444;
+        background-color: #333;
+        padding: 1em;
       }
 
       header {
@@ -85,10 +86,6 @@
         if (urlToGo) {
           location.href = `/fetch-story/?url=${urlToGo}`;
         }
-      }
-
-      function scrollDown() {
-        window.scroll(0, window.scrollY + window.screen.availHeight / 2);
       }
     </script>
   </body>
