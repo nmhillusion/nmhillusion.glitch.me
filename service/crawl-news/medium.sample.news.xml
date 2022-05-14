@@ -1,0 +1,139 @@
+
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:cc="http://cyber.law.harvard.edu/rss/creativeCommonsRssModule.html">
+    <channel>
+        <title><![CDATA[JavaScript on Medium]]></title>
+        <description><![CDATA[Latest stories tagged with JavaScript on Medium]]></description>
+        <link>https://medium.com/tag/javascript/latest?source=rss------javascript-5</link>
+        <image>
+            <url>https://cdn-images-1.medium.com/proxy/1*TGH72Nnw24QL3iV9IOm4VA.png</url>
+            <title>JavaScript on Medium</title>
+            <link>https://medium.com/tag/javascript/latest?source=rss------javascript-5</link>
+        </image>
+        <generator>Medium</generator>
+        <lastBuildDate>Sat, 14 May 2022 02:34:54 GMT</lastBuildDate>
+        <atom:link href="https://medium.com/feed/tag/javascript" rel="self" type="application/rss+xml"/>
+        <webMaster><![CDATA[yourfriends@medium.com]]></webMaster>
+        <atom:link href="http://medium.superfeedr.com" rel="hub"/>
+        <item>
+            <title><![CDATA[How to use Generics with Arrow functions in TypeScript]]></title>
+            <description><![CDATA[<div class="medium-feed-item"><p class="medium-feed-image"><a href="https://szaranger.medium.com/how-to-use-generics-with-arrow-functions-in-typescript-223d4f11e05f?source=rss------javascript-5"><img src="https://cdn-images-1.medium.com/max/800/1*tYw15nMU1jRjqZWyZ-H77A.jpeg" width="800"></a></p><p class="medium-feed-snippet">Generics are a fundamental feature of statically-typed languages, allowing developers to pass types as parameters to another type&#x2026;</p><p class="medium-feed-link"><a href="https://szaranger.medium.com/how-to-use-generics-with-arrow-functions-in-typescript-223d4f11e05f?source=rss------javascript-5">Continue reading on Medium »</a></p></div>]]></description>
+            <link>https://szaranger.medium.com/how-to-use-generics-with-arrow-functions-in-typescript-223d4f11e05f?source=rss------javascript-5</link>
+            <guid isPermaLink="false">https://medium.com/p/223d4f11e05f</guid>
+            <category><![CDATA[generics]]></category>
+            <category><![CDATA[typescript]]></category>
+            <category><![CDATA[javascript]]></category>
+            <category><![CDATA[web-development]]></category>
+            <dc:creator><![CDATA[Sean Amarasinghe]]></dc:creator>
+            <pubDate>Sat, 14 May 2022 01:04:18 GMT</pubDate>
+            <atom:updated>2022-05-14T01:30:55.480Z</atom:updated>
+        </item>
+        <item>
+            <title><![CDATA[How to use Figma as a headless WordPress]]></title>
+            <description><![CDATA[<div class="medium-feed-item"><p class="medium-feed-image"><a href="https://javascript.plainenglish.io/how-to-use-figma-as-a-headless-wordpress-21c51418ae3d?source=rss------javascript-5"><img src="https://cdn-images-1.medium.com/max/900/1*oS2g8HkRN28jdcR_BW24tg.png" width="900"></a></p><p class="medium-feed-snippet">WordPress is widely regarded as one of the most popular content management systems in the world. Figma makes it better.</p><p class="medium-feed-link"><a href="https://javascript.plainenglish.io/how-to-use-figma-as-a-headless-wordpress-21c51418ae3d?source=rss------javascript-5">Continue reading on JavaScript in Plain English »</a></p></div>]]></description>
+            <link>https://javascript.plainenglish.io/how-to-use-figma-as-a-headless-wordpress-21c51418ae3d?source=rss------javascript-5</link>
+            <guid isPermaLink="false">https://medium.com/p/21c51418ae3d</guid>
+            <category><![CDATA[figma-plugin]]></category>
+            <category><![CDATA[figma]]></category>
+            <category><![CDATA[website]]></category>
+            <category><![CDATA[wordpress]]></category>
+            <category><![CDATA[javascript]]></category>
+            <dc:creator><![CDATA[Rich Kurtzman]]></dc:creator>
+            <pubDate>Fri, 13 May 2022 22:44:17 GMT</pubDate>
+            <atom:updated>2022-05-13T22:44:17.825Z</atom:updated>
+        </item>
+        <item>
+            <title><![CDATA[Arduino Simone]]></title>
+            <description><![CDATA[<div class="medium-feed-item"><p class="medium-feed-image"><a href="https://medium.com/@cwfeldt/arduino-simone-d50629ab8b98?source=rss------javascript-5"><img src="https://cdn-images-1.medium.com/max/1153/1*elzlbf0MnaRZvaexc5NaYg.png" width="1153"></a></p><p class="medium-feed-snippet">This is documentation for my Final Integration Project in CSC 2364 class at LSU.</p><p class="medium-feed-link"><a href="https://medium.com/@cwfeldt/arduino-simone-d50629ab8b98?source=rss------javascript-5">Continue reading on Medium »</a></p></div>]]></description>
+            <link>https://medium.com/@cwfeldt/arduino-simone-d50629ab8b98?source=rss------javascript-5</link>
+            <guid isPermaLink="false">https://medium.com/p/d50629ab8b98</guid>
+            <category><![CDATA[js]]></category>
+            <category><![CDATA[javascript]]></category>
+            <category><![CDATA[arduino]]></category>
+            <category><![CDATA[p5js]]></category>
+            <category><![CDATA[elegoo]]></category>
+            <dc:creator><![CDATA[Calvin Feldt]]></dc:creator>
+            <pubDate>Fri, 13 May 2022 21:51:40 GMT</pubDate>
+            <atom:updated>2022-05-13T21:51:40.370Z</atom:updated>
+        </item>
+        <item>
+            <title><![CDATA[Building a Buggy App]]></title>
+            <description><![CDATA[<div class="medium-feed-item"><p class="medium-feed-image"><a href="https://medium.com/replay-io/building-a-buggy-app-14e75146901a?source=rss------javascript-5"><img src="https://cdn-images-1.medium.com/max/2600/1*qV-pJTCgSBtyoB_6LQYOKQ.png" width="3020"></a></p><p class="medium-feed-snippet">We&#x2019;re excited to share HasReplay.io, a collection of OSS GitHub issues that are reproducible using Replay.</p><p class="medium-feed-link"><a href="https://medium.com/replay-io/building-a-buggy-app-14e75146901a?source=rss------javascript-5">Continue reading on Replay »</a></p></div>]]></description>
+            <link>https://medium.com/replay-io/building-a-buggy-app-14e75146901a?source=rss------javascript-5</link>
+            <guid isPermaLink="false">https://medium.com/p/14e75146901a</guid>
+            <category><![CDATA[debugging]]></category>
+            <category><![CDATA[open-source]]></category>
+            <category><![CDATA[react]]></category>
+            <category><![CDATA[javascript]]></category>
+            <dc:creator><![CDATA[Cecelia Martinez]]></dc:creator>
+            <pubDate>Fri, 13 May 2022 21:47:26 GMT</pubDate>
+            <atom:updated>2022-05-13T21:47:26.771Z</atom:updated>
+        </item>
+        <item>
+            <title><![CDATA[My first day of coding…]]></title>
+            <description><![CDATA[<div class="medium-feed-item"><p class="medium-feed-image"><a href="https://medium.com/@siddharth.saxena94/my-first-day-of-coding-675fc6d07289?source=rss------javascript-5"><img src="https://cdn-images-1.medium.com/max/2600/1*EEsq4Z-jqQARDMX9uRuN-w.jpeg" width="4000"></a></p><p class="medium-feed-snippet">After much ado and with the help of my friend&#xA0;, I finally found it within me to click on the &#x2018;Start&#x2019; button&#xA0;&#x2026;</p><p class="medium-feed-link"><a href="https://medium.com/@siddharth.saxena94/my-first-day-of-coding-675fc6d07289?source=rss------javascript-5">Continue reading on Medium »</a></p></div>]]></description>
+            <link>https://medium.com/@siddharth.saxena94/my-first-day-of-coding-675fc6d07289?source=rss------javascript-5</link>
+            <guid isPermaLink="false">https://medium.com/p/675fc6d07289</guid>
+            <category><![CDATA[career-change]]></category>
+            <category><![CDATA[learning-to-code]]></category>
+            <category><![CDATA[codecademy]]></category>
+            <category><![CDATA[javascript]]></category>
+            <category><![CDATA[just-do-it]]></category>
+            <dc:creator><![CDATA[Siddharth Saxena]]></dc:creator>
+            <pubDate>Fri, 13 May 2022 21:20:35 GMT</pubDate>
+            <atom:updated>2022-05-13T21:20:35.755Z</atom:updated>
+        </item>
+        <item>
+            <title><![CDATA[My first Weather app]]></title>
+            <description><![CDATA[<div class="medium-feed-item"><p class="medium-feed-link"><a href="https://medium.com/@wesley.grant/my-first-weather-app-d19c3576bb8?source=rss------javascript-5">Continue reading on Medium »</a></p></div>]]></description>
+            <link>https://medium.com/@wesley.grant/my-first-weather-app-d19c3576bb8?source=rss------javascript-5</link>
+            <guid isPermaLink="false">https://medium.com/p/d19c3576bb8</guid>
+            <category><![CDATA[api]]></category>
+            <category><![CDATA[html]]></category>
+            <category><![CDATA[javascript]]></category>
+            <category><![CDATA[weather]]></category>
+            <category><![CDATA[css]]></category>
+            <dc:creator><![CDATA[Wesley Grant]]></dc:creator>
+            <pubDate>Fri, 13 May 2022 21:20:27 GMT</pubDate>
+            <atom:updated>2022-05-13T21:20:27.439Z</atom:updated>
+        </item>
+        <item>
+            <title><![CDATA[Usando NPM Package para criar uma Arquitetura Limpa — Parte 2]]></title>
+            <description><![CDATA[<div class="medium-feed-item"><p class="medium-feed-image"><a href="https://medium.com/@lucas.raziel/usando-npm-package-para-criar-uma-arquitetura-limpa-parte-2-8e42e3b0b8d0?source=rss------javascript-5"><img src="https://cdn-images-1.medium.com/max/2476/1*300aWFCJB9IcjA32hZT0ng.png" width="2476"></a></p><p class="medium-feed-snippet">Essa &#xE9; a segunda parte de uma s&#xE9;rie de artigo sobre a utiliza&#xE7;&#xE3;o dos pacotes NPM para reaproveitamento de c&#xF3;digo, bem como para&#x2026;</p><p class="medium-feed-link"><a href="https://medium.com/@lucas.raziel/usando-npm-package-para-criar-uma-arquitetura-limpa-parte-2-8e42e3b0b8d0?source=rss------javascript-5">Continue reading on Medium »</a></p></div>]]></description>
+            <link>https://medium.com/@lucas.raziel/usando-npm-package-para-criar-uma-arquitetura-limpa-parte-2-8e42e3b0b8d0?source=rss------javascript-5</link>
+            <guid isPermaLink="false">https://medium.com/p/8e42e3b0b8d0</guid>
+            <category><![CDATA[javascript]]></category>
+            <category><![CDATA[typescript]]></category>
+            <category><![CDATA[arquitetura-limpa]]></category>
+            <category><![CDATA[injeção-de-dependência]]></category>
+            <category><![CDATA[npm]]></category>
+            <dc:creator><![CDATA[Lucas Rêgo]]></dc:creator>
+            <pubDate>Fri, 13 May 2022 21:07:32 GMT</pubDate>
+            <atom:updated>2022-05-14T00:09:11.025Z</atom:updated>
+        </item>
+        <item>
+            <title><![CDATA[NodeJS]]></title>
+            <description><![CDATA[<div class="medium-feed-item"><p class="medium-feed-image"><a href="https://zihara.medium.com/nodejs-76c0c5d10c02?source=rss------javascript-5"><img src="https://cdn-images-1.medium.com/max/866/0*EUSL9vr9x-l-gGzu.jpg" width="866"></a></p><p class="medium-feed-snippet">What is NodeJS?</p><p class="medium-feed-link"><a href="https://zihara.medium.com/nodejs-76c0c5d10c02?source=rss------javascript-5">Continue reading on Medium »</a></p></div>]]></description>
+            <link>https://zihara.medium.com/nodejs-76c0c5d10c02?source=rss------javascript-5</link>
+            <guid isPermaLink="false">https://medium.com/p/76c0c5d10c02</guid>
+            <category><![CDATA[javascript]]></category>
+            <category><![CDATA[nodejs]]></category>
+            <dc:creator><![CDATA[Fathima Zihara Iqbal]]></dc:creator>
+            <pubDate>Fri, 13 May 2022 20:50:21 GMT</pubDate>
+            <atom:updated>2022-05-13T20:50:21.318Z</atom:updated>
+        </item>
+        <item>
+            <title><![CDATA[“We believe deep learning and JavaScript belong together”, me too!]]></title>
+            <description><![CDATA[<div class="medium-feed-item"><p class="medium-feed-image"><a href="https://jorgeguerrapires.medium.com/we-believe-deep-learning-and-javascript-belong-together-me-too-b70e40cf6092?source=rss------javascript-5"><img src="https://cdn-images-1.medium.com/max/2600/0*nlA4BiLcUyyrbbhC" width="6000"></a></p><p class="medium-feed-snippet">How a just-married couple could change the world</p><p class="medium-feed-link"><a href="https://jorgeguerrapires.medium.com/we-believe-deep-learning-and-javascript-belong-together-me-too-b70e40cf6092?source=rss------javascript-5">Continue reading on Medium »</a></p></div>]]></description>
+            <link>https://jorgeguerrapires.medium.com/we-believe-deep-learning-and-javascript-belong-together-me-too-b70e40cf6092?source=rss------javascript-5</link>
+            <guid isPermaLink="false">https://medium.com/p/b70e40cf6092</guid>
+            <category><![CDATA[deep-learning]]></category>
+            <category><![CDATA[mean-stack]]></category>
+            <category><![CDATA[tensorflow]]></category>
+            <category><![CDATA[python]]></category>
+            <category><![CDATA[javascript]]></category>
+            <dc:creator><![CDATA[Jorge Guerra Pires, PhD]]></dc:creator>
+            <pubDate>Fri, 13 May 2022 20:45:41 GMT</pubDate>
+            <atom:updated>2022-05-13T23:11:32.873Z</atom:updated>
+        </item>
+    </channel>
+</rss>

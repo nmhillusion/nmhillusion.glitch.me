@@ -1,6 +1,6 @@
 "strict";
 
-import fs from "fs";
+import fs, { link } from "fs";
 import fetch from "node-fetch";
 import xml2js from "xml2js";
 
@@ -8,22 +8,80 @@ const TESTING = "true" === process.env.TESTING;
 
 console.log({ TESTING });
 
-function vnpressParseRss(xmlData) {
+function rssParser(xmlData) {
+  function getItemAt0(item) {
+    return item ? item[0] : null;
+  }
+
+  if (!xmlData) {
+    return [];
+  }
+
   return new Promise((resolve, reject) => {
     xml2js
       .parseStringPromise(xmlData, { normalize: true })
-      .then((r) =>
-        resolve(
-          r.rss.channel[0].item.map((it) => ({
-            title: it.title[0],
-            description: it.description[0],
-            link: it.link[0],
-            pubDate: it.pubDate[0],
-          }))
-        )
-      )
+      .then((r) => {
+        try {
+          let items = [];
+          if (r.rss) {
+            items = r.rss.channel[0].item.map((it) => ({
+              title: getItemAt0(it.title),
+              description: prettierDescription(getItemAt0(it.description)),
+              link: parseLinkFromFeed(getItemAt0(it.link)),
+              pubDate: getItemAt0(it.pubDate),
+              source: parseSourceFromLink(getItemAt0(it.link)),
+            }));
+          } else if (r.feed) {
+            items = r.feed.entry.map((it) => ({
+              title: getItemAt0(it.title),
+              description: prettierDescription(getItemAt0(it.description)),
+              link: parseLinkFromFeed(getItemAt0(it.link)),
+              pubDate: getItemAt0(it.pubDate),
+              source: parseSourceFromLink(
+                parseLinkFromFeed(getItemAt0(it.link))
+              ),
+            }));
+          } else {
+            console.error("Not found parser for feed: ", r);
+          }
+          resolve(items);
+        } catch (error) {
+          console.error("Error occur: ", error, r);
+        }
+      })
       .catch(reject);
   });
+}
+
+function prettierDescription(description) {
+  if (!description) {
+    return description;
+  }
+
+  return description.replace(/\/zoom\/\d+_\d+/, "");
+}
+
+function parseLinkFromFeed(link) {
+  if (!link) {
+    return link;
+  }
+
+  if ("object" == typeof link) {
+    if (link["$"]) {
+      link = link.$.href;
+    }
+  }
+
+  return link;
+}
+
+function parseSourceFromLink(link) {
+  if (!link) {
+    return link;
+  }
+  link = link.replace(/https?:\/\//, "");
+  link = link.substring(0, link.indexOf("/"));
+  return link;
 }
 
 export class CrawlNewsService {
@@ -31,10 +89,12 @@ export class CrawlNewsService {
     return new Promise((resolve, reject) => {
       try {
         const xmlData = fs
-          .readFileSync(process.cwd() + "/service/crawl-news/sample.news.xml")
+          .readFileSync(
+            process.cwd() + "/service/crawl-news/sample.news.xml"
+          )
           .toString();
 
-        vnpressParseRss(xmlData).then(resolve).catch(reject);
+        rssParser(xmlData).then(resolve).catch(reject);
       } catch (e) {
         reject(e);
       }
@@ -50,7 +110,7 @@ export class CrawlNewsService {
   }
 
   static loadFromOnlineSource() {
-    const newsPromises = [this.loadFromVnExpress()];
+    const newsPromises = this.loadFromNewsSources();
 
     return new Promise((resolve, reject) => {
       try {
@@ -71,32 +131,44 @@ export class CrawlNewsService {
     });
   }
 
-  static loadFromVnExpress() {
-    return new Promise((resolve, reject) => {
-      const vnexpressSources = this.loadNewsSource()["vnexpress"];
-      const vnexpressPromises = vnexpressSources.map((src) => {
-        return fetch(src, {
-          method: "GET",
-          redirect: "follow",
-          compress: true,
-          headers: {
-            Connection: "keep-alive",
-          },
-        }).then((r) => r.text());
-      });
+  static loadFromNewsSources() {
+    const newsResource = this.loadNewsSource();
+    const sourcePromises = [];
 
-      Promise.all(vnexpressPromises)
-        .then(async (resultList) => {
-          const combinedNews = [];
+    for (const sourceNameItem of Object.keys(newsResource)) {
+      const sourceItem = newsResource[sourceNameItem];
 
-          for (const newsData of resultList) {
-            combinedNews.push(...await vnpressParseRss(newsData));
-          }
+      sourcePromises.push(
+        new Promise((resolve, reject) => {
+          const newsPromises = sourceItem.map((src) => {
+            return fetch(src, {
+              method: "GET",
+              redirect: "follow",
+              compress: true,
+              headers: {
+                Connection: "keep-alive",
+              },
+            })
+              .then((r) => r.text())
+              .catch((err) => console.error("Error when fetching: ", src, err));
+          });
 
-          resolve(combinedNews);
+          Promise.all(newsPromises)
+            .then(async (resultList) => {
+              const combinedNews = [];
+
+              for (const newsData of resultList) {
+                combinedNews.push(...(await rssParser(newsData)));
+              }
+
+              resolve(combinedNews);
+            })
+            .catch(reject);
         })
-        .catch(reject);
-    });
+      );
+    }
+
+    return sourcePromises;
   }
 
   static crawl() {
