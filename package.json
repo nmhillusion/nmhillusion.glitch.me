@@ -39,6 +39,7 @@
   },
   "devDependencies": {
     "@types/express": "^4.17.13",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "n2ngin-bull-engine": "https://github.com/nmhillusion/n2ngin-bull-engine/tarball/v2022.1.1+12"
   }
 }

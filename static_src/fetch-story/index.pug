@@ -1,0 +1,34 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Fetch Story
+    link(rel="stylesheet", href="./style.scss")
+  body 
+    .nav-url
+      input#url-to-go(type='text' name='url-to-go')
+      button.btn.btn-primary#btnGotoLink Goto
+    
+    .main-action-box
+      button#btnSyncToServer Sync To Server
+
+    .link-list-container
+      .adding-form
+        input#add-link--title(type='text', name='add-link--title', placeholder="title")
+        input#add-link--link(type='text', name='add-link--link', placeholder="link")
+        button.btn.btn-primary#btnAddLink Add
+      
+      hr
+
+      label Link List:
+      table
+        thead
+          th Title
+          th Link
+          th Action
+        tbody.link-list#link-list
+    
+    script(type='text/javascript', src="./main.ts")
+

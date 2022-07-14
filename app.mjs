@@ -15,6 +15,7 @@ const PORT = 8000;
 app.use(charsetMiddleWareHandler);
 app.use(ginxMiddleWareHandler);
 app.use(loggerMiddleWareHandler);
+app.use("/static", express.static(process.cwd() + "/static"))
 
 app.get("/", (req, res) => {
   res.header("Content-Type", "text/html");
@@ -25,5 +26,5 @@ app.use("/fetch-story", fetchStoryRouter);
 app.use("/crawl-news", cors({ origin: "*" }), crawlNewsRouter);
 
 app.listen(PORT, () => {
-  console.log(`app listening on port ${PORT}`);
+  console.log(`app listening on port ${PORT}: http://localhost:8000`);
 });

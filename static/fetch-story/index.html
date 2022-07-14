@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Story</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body> 
+    <div class="nav-url">
+      <input id="url-to-go" type="text" name="url-to-go">
+      <button class="btn btn-primary" id="btnGotoLink">Goto</button>
+    </div>
+    <div class="main-action-box">
+      <button id="btnSyncToServer">Sync To Server</button>
+    </div>
+    <div class="link-list-container">
+      <div class="adding-form">
+        <input id="add-link--title" type="text" name="add-link--title" placeholder="title">
+        <input id="add-link--link" type="text" name="add-link--link" placeholder="link">
+        <button class="btn btn-primary" id="btnAddLink">Add</button>
+      </div>
+      <hr>
+      <label>Link List:</label>
+      <table>
+        <thead>
+          <th>Title</th>
+          <th>Link</th>
+          <th>Action</th>
+        </thead>
+        <tbody class="link-list" id="link-list"></tbody>
+      </table>
+    </div>
+    <script type="text/javascript" src="./main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "fetchStory": {
+    "savedLink": {
+      "apiLink": "https://script.google.com/macros/s/AKfycbyWjumkVRYJtbjeDE9VL9i0ycmAM0HySWTpZ4_cTHYibqqPbiM/exec",
+      "sheetId": "16eXWU6RjodEiflVi3-uaktnlUD7UrNw9oZJWXBZ5OE0",
+      "apiName": {
+        "getData": "getDataSpreadsheet",
+        "setData": "setDataSpreadsheet"
+      }
+    }
+
+  }
+}
