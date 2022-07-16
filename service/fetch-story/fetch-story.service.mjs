@@ -3,6 +3,7 @@
 import fetch from "node-fetch";
 import domParser from "html-dom-parser";
 import fs from "fs";
+import FormData from "form-data";
 
 const TESTING = "true" === process.env.TESTING;
 
@@ -34,6 +35,48 @@ export class FetchStoryService {
         resolve(renderedHtmlFromTemplate(samplePage, url));
       }
     });
+  }
+
+  static fetchSavedLinks() {
+    const envConfig = JSON.parse(
+      fs.readFileSync(process.cwd() + "/static_env/dev.json").toString()
+    );
+    const dataObject = {};
+    dataObject["type"] = envConfig.fetchStory.savedLink.apiName.getData;
+    dataObject["data"] = JSON.stringify(envConfig.fetchStory.savedLink.sheetId);
+
+    const body = Object.keys(dataObject)
+      .map((k) => `${k}=${dataObject[k]}`)
+      .join("&");
+
+    return new Promise((resolve, reject) => {
+      fetch(envConfig.fetchStory.savedLink.apiLink, {
+        method: "POST",
+        body,
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+      })
+        .then((r) => r.json())
+        .then(resolve)
+        .catch(reject);
+    });
+  }
+
+  static buildSavedLinksHtml(links = []) {
+    const outHtmlArray = [];
+
+    if (Array.isArray(links)) {
+      for (const item of links) {
+        const itemHTMl = `
+      <tr class="link-item"><td>${item[0]}</td><td><a href="/fetch-story/?url=${item[1]}">${item[1]}</a></td><td></td></tr>
+    `;
+
+        outHtmlArray.push(itemHTMl);
+      }
+    }
+
+    return outHtmlArray.join("");
   }
 }
 
