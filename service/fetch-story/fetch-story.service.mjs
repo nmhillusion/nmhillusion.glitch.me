@@ -3,7 +3,6 @@
 import fetch from "node-fetch";
 import domParser from "html-dom-parser";
 import fs from "fs";
-import FormData from "form-data";
 
 const TESTING = "true" === process.env.TESTING;
 
